@@ -61,7 +61,7 @@ function Profile() {
                 <h4>Your Coupon:</h4>
                 <p>Code: {coupon.code}</p>
                 <p>Discount: {coupon.discount}</p>
-                <p>Details: {coupon.details}</p>
+           
               </div>
             )}
           </div>

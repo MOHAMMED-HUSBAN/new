@@ -1,8 +1,7 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "./firebase";
 import { doc, updateDoc } from "firebase/firestore";
-import { toast } from "react-toastify";
 import SignInwithGoogle from "./signInWIthGoogle";
 import { getRandomCoupon } from "./coupons";
 
@@ -20,15 +19,8 @@ function Login() {
 
       console.log("User logged in Successfully");
       window.location.href = "/profile";
-      toast.success("User logged in Successfully", {
-        position: "top-center", 
-      });
     } catch (error) {
       console.log(error.message);
-
-      toast.error(error.message, {
-        position: "bottom-center",
-      });
     }
   };
 
@@ -66,7 +58,7 @@ function Login() {
       <p className="forgot-password text-right">
         New user <a href="/register">Register Here</a>
       </p>
-      <SignInwithGoogle/>
+      <SignInwithGoogle />
     </form>
   );
 }

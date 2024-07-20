@@ -2,7 +2,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth, db } from "./firebase";
 import { setDoc, doc } from "firebase/firestore";
-import { toast } from "react-toastify";
+
 import { getRandomCoupon } from "./coupons";
 
 function Register() {
@@ -27,14 +27,10 @@ function Register() {
         });
       }
       console.log("User Registered Successfully!!");
-      toast.success("User Registered Successfully!!", {
-        position: "top-center",
-      });
+    
     } catch (error) {
       console.log(error.message);
-      toast.error(error.message, {
-        position: "bottom-center",
-      });
+   
     }
   };
 
