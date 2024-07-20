@@ -1,4 +1,4 @@
-// transferData.js
+
 import { db, realtimeDb } from "./firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { ref, set } from "firebase/database";
